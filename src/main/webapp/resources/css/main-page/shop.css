@@ -1,0 +1,55 @@
+#body-wrapper {
+    padding : 0;
+}
+
+.card {
+    min-width: 200px;
+    max-width: 300px;
+    margin-bottom: 10px;
+    border: none;
+    background-color: goldenrod;
+}
+
+.card img{
+    height: 16em;
+    object-fit: fill;
+}
+
+
+.card-header {
+    text-align: center;
+    font-weight: bold;
+    color: #711c7b;
+}
+
+.card-footer {
+    color: #711c7b;
+}
+
+.card-img-overlay{
+    background-color: cornsilk;
+    opacity: 0;
+    padding: 0;
+    transition-duration: 0.3s;
+    font-size: 16px;
+    font-weight: bold;
+    color: #711c7b;
+}
+
+.card-img-overlay a{
+    font-size: 30px;
+    width: 100%;
+    line-height: 80px;
+}
+.card-content-wrap {
+    height: 100%;
+}
+
+.card-img-overlay:hover {
+    opacity: 0.8;
+}
+
+#main-section {
+    background-color: darkolivegreen;
+
+}

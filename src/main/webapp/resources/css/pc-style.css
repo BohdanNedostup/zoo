@@ -1,0 +1,30 @@
+@font-face {
+    font-family: PoiretOne;
+    src: url(../fonts/poiret_one.ttf);
+}
+
+body{
+    background-color: #007b5e;
+    font-family: PoiretOne;
+    color: #35cffc;
+}
+
+body a{
+    color: #35cffc;
+}
+
+body a:hover{
+    color: #ff7a28;
+    text-decoration: none;
+}
+
+.form-group{
+    font-weight: bold;
+}
+.container-fluid {
+    padding: 0;
+}
+
+.row{
+    margin: 0;
+}

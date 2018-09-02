@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+        "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+    <!--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
+    <!--                  attribute "name" is server folders                       -->
+    <!--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
+
+    <!-- Base Define -->
+    <definition name="base" template="/WEB-INF/tiles/classic.jsp">
+        <put-attribute name="title" value="Ferarum"/>
+        <put-attribute name="header" value="/WEB-INF/fragments/_header.jsp"/>
+        <put-attribute name="navigation" value="/WEB-INF/fragments/_navigation.jsp"/>
+        <put-attribute name="body" value=""/>
+        <put-attribute name="footer" value="/WEB-INF/fragments/_footer.jsp"/>
+        <put-list-attribute name="stylesheets" cascade="true">
+            <add-attribute value="/resources/css/reset.css"/>
+            <add-attribute value="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"/>
+            <add-attribute value="/resources/css/pc-style.css"/>
+            <add-attribute value="/resources/css/templates/header-style.css"/>
+            <add-attribute value="/resources/css/templates/navigation-style.css"/>
+            <add-attribute value="/resources/css/templates/footer-style.css"/>
+        </put-list-attribute>
+        <put-list-attribute name="scripts" cascade="true">
+            <add-attribute value="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"/>
+            <add-attribute value="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"/>
+            <add-attribute value="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"/>
+            <add-attribute value="/resources/js/moment.js"/>
+            <add-attribute value="/resources/js/axios.min.js"/>
+            <add-attribute value="/resources/js/vue.min.js"/>
+            <add-attribute value="/resources/js/main.js"/>
+        </put-list-attribute>
+    </definition>
+
+    <definition name="adminBase" template="/WEB-INF/tiles/admin-template.jsp">
+        <put-attribute name="title" value=""/>
+        <put-attribute name="header" value="/WEB-INF/fragments/_header.jsp"/>
+        <put-attribute name="navigation" value="/WEB-INF/fragments/_navigation.jsp"/>
+        <put-attribute name="admin-navigation" value="/WEB-INF/fragments/_admin-navigation.jsp"/>
+        <put-attribute name="body" value=""/>
+        <put-list-attribute name="stylesheets" cascade="true">
+            <add-attribute value="/resources/css/reset.css"/>
+            <add-attribute value="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"/>
+            <add-attribute value="/resources/css/pc-style.css"/>
+            <add-attribute value="/resources/css/templates/header-style.css"/>
+            <add-attribute value="/resources/css/templates/navigation-style.css"/>
+            <add-attribute value="/resources/css/templates/admin-page-style.css"/>
+        </put-list-attribute>
+        <put-list-attribute name="scripts" cascade="true">
+            <add-attribute value="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"/>
+            <add-attribute value="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"/>
+            <add-attribute value="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"/>
+            <add-attribute value="/resources/js/moment.js"/>
+            <add-attribute value="/resources/js/main.js"/>
+            <add-attribute value="/resources/js/axios.min.js"/>
+            <add-attribute value="/resources/js/vue.min.js"/>
+        </put-list-attribute>
+    </definition>
+
+    <definition name="*" extends="base">
+        <put-attribute name="body" value="/WEB-INF/views/{1}.jsp"/>
+        <put-list-attribute name="mainPageScripts">
+            <add-attribute value="/resources/js/main-page/{1}.js"/>
+        </put-list-attribute>
+        <put-list-attribute name="mainPageStylesheets">
+            <add-attribute value="/resources/css/main-page/{1}.css"/>
+        </put-list-attribute>
+    </definition>
+
+    <definition name="user/*" extends="base">
+        <put-attribute name="body" value="/WEB-INF/views/user/{1}.jsp"/>
+        <put-list-attribute name="mainPageScripts">
+            <add-attribute value="/resources/js/user/{1}.js"/>
+        </put-list-attribute>
+        <put-list-attribute name="mainPageStylesheets">
+            <add-attribute value="/resources/css/user/{1}.css"/>
+        </put-list-attribute>
+    </definition>
+
+    <definition name="admin/*" extends="adminBase">
+        <put-attribute name="body" value="/WEB-INF/views/admin/{1}.jsp"/>
+        <put-list-attribute name="adminPageScripts">
+            <add-attribute value="/resources/js/admin-page/{1}.js"/>
+        </put-list-attribute>
+        <put-list-attribute name="adminPageStylesheets">
+            <add-attribute value="/resources/css/admin-page/{1}.css"/>
+        </put-list-attribute>
+    </definition>
+    <!--<definition name="error" template="/WEB-INF/views/404.jsp"/>-->
+</tiles-definitions>

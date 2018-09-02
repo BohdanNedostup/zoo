@@ -1,0 +1,13 @@
+body{
+    min-width: 767px;
+}
+
+#body-wrapper{
+    color: #000;
+    font-family: Candara;
+}
+
+#res *{
+    margin: 0;
+    padding: 0;
+}

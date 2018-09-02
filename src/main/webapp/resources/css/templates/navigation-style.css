@@ -1,0 +1,131 @@
+.menu-row {
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    background-color: aqua;
+    top: -100%;
+}
+
+@media screen and (max-width: 672px) {
+    .menu-row {
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background-color: aqua;
+    }
+}
+
+
+.menuItem {
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-size: 30px;
+    font-style: italic;
+    font-weight: bold;
+    color: #338bbd;
+    z-index: 10;
+}
+
+.menuItem:hover {
+    background-blend-mode: screen;
+}
+
+
+#menu1 {
+    -webkit-transition-delay: 0.1s;
+    transition-delay: 0.1s;
+    background-image: url(/resources/img/menu_img/news.jpg);
+    background-color: greenyellow;
+}
+
+#menu2 {
+    -webkit-transition-delay: 0.2s;
+    transition-delay: 0.2s;
+    background-image: url(/resources/img/menu_img/galery.png);
+    background-color:aquamarine;
+}
+
+#menu3 {
+    -webkit-transition-delay: 0.3s;
+    transition-delay: 0.3s;
+    background-image: url(/resources/img/menu_img/tickets.jpg);
+    background-color: green;
+}
+
+#menu4 {
+    -webkit-transition-delay: 0.4s;
+    transition-delay: 0.4s;
+    background-image: url(/resources/img/menu_img/shop.jpg);
+    background-color: pink;
+}
+
+#menu5 {
+    -webkit-transition-delay: 0.5s;
+    transition-delay: 0.5s;
+    background-image: url(/resources/img/menu_img/support.jpg);
+    background-color: orange;
+}
+
+#menu6 {
+    -webkit-transition-delay: 0.6s;
+    transition-delay: 0.6s;
+    background-image: url(/resources/img/menu_img/about_us.jpg);
+    background-color: green;
+}
+
+.cl-effect-3 {
+    width: 100%;
+}
+
+.cl-effect-3 a:hover,
+.cl-effect-3 a:focus {
+    outline: none;
+    color: blue;
+}
+
+.cl-effect-3 a {
+    position: relative;
+    outline: none;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.cl-effect-3 a::after {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: #35cffc;
+    content: '';
+    opacity: 0;
+    -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+    transition: opacity 0.3s, -webkit-transform 0.3s;
+    transition: opacity 0.3s, transform 0.3s;
+    transition: opacity 0.3s, transform 0.3s, -webkit-transform 0.3s;
+    -webkit-transform: translateY(10px);
+    transform: translateY(20px);
+}
+
+.cl-effect-3 a:hover::after,
+.cl-effect-3 a:focus::after {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+}

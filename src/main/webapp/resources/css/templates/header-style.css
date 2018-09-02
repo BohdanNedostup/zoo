@@ -1,0 +1,20 @@
+.dropdown-toggle::after {
+    display:none;
+}
+
+.dropdown-menu{
+    background-color: #007b5e;
+    border: 3px solid #35cffc;
+}
+
+.dropdown-item{
+    color: #35cffc;
+    font-weight: bold;
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus{
+    background-color: transparent;
+    color: #ff7a28;
+    cursor: pointer;
+}

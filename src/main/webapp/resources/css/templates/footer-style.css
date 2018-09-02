@@ -1,0 +1,56 @@
+
+#footer {
+    /*position: absolute;*/
+    /*width: 100%;*/
+    /*top: 100%;*/
+    padding-top: 20px;
+    color: #35cffc;
+    background-image: url(/resources/img/icons/sarafi-footer-banner.png);
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: contain;
+}
+
+#footer a {
+    text-decoration: none;
+}
+
+#footer ul.social li a i {
+    margin-right: 30px;
+    font-size: 25px;
+    color: #35cffc;
+    -webkit-transition: .5s all ease;
+    transition: .5s all ease;
+}
+
+#footer ul.social li:hover a i {
+    font-size: 30px;
+    margin-top: -10px;
+}
+
+#footer ul.quick-links li a {
+    color: #35cffc;
+    font-weight: bold;
+}
+
+#footer ul.quick-links li {
+    padding: 3px 0;
+    -webkit-transition: .5s all ease;
+    transition: .5s all ease;
+}
+
+#footer ul.quick-links li:hover {
+    margin-left: 5px;
+}
+#footer ul.quick-links li:hover a{
+    color: #ff7a28;
+}
+
+#footer ul.quick-links li a i {
+    margin-right: 5px;
+}
+
+.copyright{
+    color: black;
+    font-weight: bold;
+}
